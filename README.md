@@ -1,5 +1,5 @@
 #  Controller方法调用跟踪jar
-    通过使用自定义注解处理类的方式，实现在编译阶段生成指定的classes文件，该classes的作用就是拦截配置的方法，记录下方法调用前后的方法及时间信息，并提供接口展示这部分信息。  主要的作用就是为了帮助项目组新成员熟悉项目的接口及调用过程，从整体结构上了解整体框架。
+   通过使用自定义注解处理类的方式，实现在编译阶段生成指定的classes文件，该classes的作用就是拦截配置的方法，记录下方法调用前后的方法及时间信息，并提供接口展示这部分信息。  主要的作用就是为了帮助项目组新成员熟悉项目的接口及调用过程，从整体结构上了解整体框架。
 ## 项目组成结构
 + screenshots：截图
 + union-commons-util：工具类项目
@@ -82,6 +82,12 @@ maxOpenPreparedStatements=20
 ## 展示
 1.方法调用栈
 
+![方法调用栈](https://github.com/youpanpan/invoke-trace/blob/master/screenshots/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%E6%A0%88.png?raw=true)
+
 2.方法详情
 
+![方法详情](https://github.com/youpanpan/invoke-trace/blob/master/screenshots/%E6%96%B9%E6%B3%95%E8%AF%A6%E6%83%85.png?raw=true)
+
 3.最近20次统计调用时间统计
+
+![最近20次统计调用时间](https://github.com/youpanpan/invoke-trace/blob/master/screenshots/%E6%9C%80%E8%BF%9120%E6%AC%A1%E7%BB%9F%E8%AE%A1.png?raw=true)
