@@ -1,0 +1,45 @@
+body{
+    background-color: #fff;
+}
+
+.page-content{
+    width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.system-title{
+    text-align: center;
+    font-size: 80px;
+    font-family: fantasy;
+    color:#009688;
+    padding: 0 10px;
+    margin: 30px auto;
+}
+
+.list-group-item{
+    font-style: italic;
+}
+
+.exception-request{
+    color: #d9534f;
+}
+
+.section-title{
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.layui-table-cell{
+    height: auto;
+    word-wrap: break-word;
+    word-break: normal;
+    white-space: normal;
+}
+
+.method-chart{
+    width: 100%;
+    height: 500px;
+}

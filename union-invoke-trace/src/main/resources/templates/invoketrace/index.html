@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="public/layout-invoketrace">
+<div th:fragment="content">
+    <link rel="stylesheet" th:href="${'/static/invoketrace/css/invoketrace/index.css'}">
+
+    <div class="page-content">
+        <div class="row">
+            <div class="system-title" title="方法调用跟踪">
+                <span>Method Invoke Trace</span>
+            </div>
+            <div class="layui-collapse" lay-filter="collapse-filter">
+                <div class="layui-colla-item" th:each="method : ${pageResult.list}">
+                    <h2 th:class="${'layui-colla-title ' + ((method.endTimestamp - method.startTimestamp) > 1000 ? 'exception-request' : '') }" th:text="${method.fullName}"></h2>
+                    <div class="layui-colla-content" th:data="${method.fullName}">
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">1、调用层级结构</h2>
+                                <div class="layui-colla-content layui-show">
+                                    <div th:id="${'method_tree'}"></div>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">2、方法详情</h2>
+                                <div class="layui-colla-content">
+                                    <div id="method_table"></div>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">3、最近20次统计</h2>
+                                <div class="layui-colla-content" th:data="${method.fullName}">
+                                    <div id="method_statistics_chart" class="method-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.page-content -->
+</div>
+</html>
+
+<script th:src="${'/static/invoketrace/js/echarts.min.js'}"></script>
+<script th:src="${'/static/invoketrace/js/invoketrace/index.js'}"></script>
